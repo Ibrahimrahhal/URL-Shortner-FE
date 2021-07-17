@@ -1,0 +1,8 @@
+@import '/sass/variables.scss';
+@function stripUnit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+@function toRem($px-value) {
+    @return #{stripUnit($px-value) / stripUnit($html-font-size)}rem;
+}
