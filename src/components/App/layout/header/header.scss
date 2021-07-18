@@ -1,16 +1,5 @@
-@import '../../../../..//sass/function.scss';
-@import "../../../../../node_modules/bootstrap/scss/mixins";
-@import "../../../../../node_modules/bootstrap/scss/functions";
-@import "../../../../../node_modules/bootstrap/scss/variables";
-
-/**********************************/
-
-
-/*********** Nav Bar CSS **********/
-
-
-/**********************************/
-
+@import '../../../../../sass/function.scss';
+@import '../../../../../sass/public.scss';
 section {
     min-height: toRem(300px)
 }
