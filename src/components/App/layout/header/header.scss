@@ -1,7 +1,77 @@
-header {
-    background-color: #666;
-    padding: 30px;
-    text-align: center;
-    font-size: 35px;
-    color: white;
+@import '../../../../../sass/function.scss';
+@import '../../../../../sass/public.scss';
+section {
+    min-height: toRem(300px)
+}
+
+.navbar {
+    position: relative;
+    transition: .5s;
+    z-index: map-get($z-index, nav);
+    a {
+        text-decoration: unset;
+    }
+    &__navbar {
+        &-collapse {
+            display: flex;
+            -ms-flex-preferred-size: auto;
+            flex-basis: auto;
+        }
+    }
+    &__navbar-brand {
+        color: $primary-color;
+        margin: 0;
+        font-size: toRem(45px);
+        line-height: toRem(0px);
+        font-weight: 700;
+        letter-spacing: toRem(2px);
+        transition: .5s;
+        img {
+            max-width: 100%;
+            max-height: toRem(40px);
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        position: absolute;
+        width: 100%;
+        padding: toRem(30px) toRem(60px);
+        background: transparent;
+        border-bottom: toRem(1px) dashed $secondary-color;
+        z-index: map-get($z-index, nav-lg);
+        background-color: $secondary-color;
+        &__navbar-nav {
+            &--nav-link,
+            &--nav-link:focus {
+                padding: toRem(10px) toRem(10px) toRem(8px) toRem(10px);
+                color: $primary-color;
+                font-size: toRem(15px);
+                font-weight: 500;
+            }
+            &--nav-link:hover,
+            &--nav-link.active {
+                color: $veryDarkGray;
+            }
+        }
+    }
+    @include media-breakpoint-down(lg) {
+        padding: toRem(15px);
+        background: $secondary-color;
+        &__navbar-nav {
+            margin-top: toRem(15px);
+            &--nav-link,
+            &--nav-link:focus {
+                padding: toRem(10px) toRem(10px) toRem(8px) toRem(10px);
+                color: $primary-color;
+                font-size: toRem(15px);
+                font-weight: 500;
+            }
+            &--nav-link:hover,
+            &--nav-link.active {
+                color: $veryDarkGray;
+            }
+        }
+        &__nav-link {
+            padding: toRem(5px);
+        }
+    }
 }
