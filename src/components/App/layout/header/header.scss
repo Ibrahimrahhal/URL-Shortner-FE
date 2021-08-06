@@ -4,19 +4,24 @@ section {
     min-height: toRem(300px)
 }
 
+.navbar-light {
+    .navbar-nav {
+        .nav-link:hover,
+        .nav-link:focus,
+        .nav-link {
+            color: $primary-color;
+        }
+    }
+}
+
 .navbar {
+    overflow: hidden;
+    padding: toRem(10px);
     position: relative;
     transition: .5s;
     z-index: map-get($z-index, nav);
     a {
         text-decoration: unset;
-    }
-    &__navbar {
-        &-collapse {
-            display: flex;
-            -ms-flex-preferred-size: auto;
-            flex-basis: auto;
-        }
     }
     &__navbar-brand {
         color: $primary-color;

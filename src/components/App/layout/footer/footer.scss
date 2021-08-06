@@ -1,7 +1,14 @@
 @import '../../../../../sass/function.scss';
 @import '../../../../../sass/public.scss';
 .footer {
-    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold toRem(16px) sans-serif;
+    padding: toRem(50px) toRem(50px) toRem(60px) toRem(50px);
+    margin-top: toRem(80px);
+    position: fixed;
+    bottom: 0;
     margin-top: toRem(45px);
     background: $primary-color;
     &__container-fluid {
