@@ -1,0 +1,32 @@
+@import '../../../sass/function.scss';
+@import '../../../sass/public.scss';
+.mat-nav {
+    background-color: $primary-color;
+    &__navlinks {
+        margin-left: toRem(5px);
+        display: flex;
+    }
+    &__logo {
+        cursor: pointer
+    }
+    &__link {
+        text-decoration: none;
+        color: $secondary-color;
+        font-size: toRem(20px);
+        margin-left: toRem(200px);
+        &:hover {
+            color: $secondary-color;
+            ;
+            border-bottom: 1px solid $secondary-color;
+            ;
+        }
+    }
+}
+
+.drawer {
+    background-color: $primary-color;
+    &__link {
+        text-decoration: unset;
+        color: $secondary-color;
+    }
+}
